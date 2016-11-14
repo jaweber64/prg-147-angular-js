@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Angular JS - Mowing Estimator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+
+<body ng-app="MowApp">
+<div class="w3-container w3-section w3-border w3-round-xlarge w3-border-green" id="outer">
+    <header class="w3-panel w3-text-indigo" id="head">
+        <h1>Forms using Angular JS</h1>
+        <h4>(Original Version)</h4>
+    </header>
+
+    <div ng-controller="MainController" class="w3-container w3-section w3-border w3-round-xlarge w3-border-green" id="mowform">
+        <h3> {{ title }} </h3>
+
+        <!--calculate square footage of all yards, assume 10 cents per square foot -->
+        <p style="text-align: center">Please enter the values below (in feet), then click "Estimate Cost"</p>
+
+        <div ng-repeat="item in sections">
+            <mow-info info=item></mow-info>
+        </div>
+
+        <br>
+        <button onclick="calculate_cost()"/>Calculate Cost</button><br/>
+        <p>The square footage of the yard is => <span id="area"></span> square feet.</p>
+        <p>The total cost (10 cents/yard) => <span id="mowingcost"></span></p>
+
+        <div>&nbsp;</div>
+        <a href="../ajs2/index.html">Click here for another version!</a>
+        <p>Looks the same, but angular-JS is much different.</p>
+        <div>&nbsp;</div>
+    </div>
+
+    <footer>
+        <div class="w3-row w3-round-xlarge">
+            <div class="w3-half left-footer">
+                <p>&copy Janet Weber <br>
+                    Images Courtesy of <a href="https://pixabay.com/">Pixabay</a></p>
+            </div>
+            <div class="w3-half right-footer">
+                <p>PRG-147 Fall 2016 <br>
+                    Learn Angular JS</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!-- Modules -->
+<script src="js/app.js"></script>
+
+<!-- Controllers -->
+<script src="js/controllers/maincontroller.js"></script>
+
+<!-- Directives -->
+<script src="js/directives/mowinfo.js"></script>
+
+</body>
+</html>

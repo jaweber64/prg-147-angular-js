@@ -1,0 +1,37 @@
+/* CSS Document */
+
+.w3-container{
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Comic Sans MS", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    box-sizing: border-box;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+}
+
+h1, h3, h4 {
+    font-family: "Comic Sans MS", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+}
+h3 {
+    color: white;
+}
+#mowform {
+    background-image: url("grass.jpg");
+    background-size: cover;
+}
+
+p.phead {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+footer p {margin: 0; color: green; text-shadow: none;}
+.right-footer {text-align: right;}
+.left-footer {text-align: left;}
